@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15A19EEC-1069-4F62-88BB-69060E61D6CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Турагенство</RootNamespace>
+    <AssemblyName>Турагенство</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Document.NET, Version=2.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.2.4.0\lib\net40\Xceed.Document.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Words.NET, Version=2.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.2.4.0\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_dogovor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_dogovor.Designer.cs">
+      <DependentUpon>Add_dogovor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_klients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_klients.Designer.cs">
+      <DependentUpon>Add_klients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_putevki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_putevki.Designer.cs">
+      <DependentUpon>Add_putevki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_sotrudniki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_sotrudniki.Designer.cs">
+      <DependentUpon>Add_sotrudniki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_tyroperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_tyroperator.Designer.cs">
+      <DependentUpon>Add_tyroperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Director.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Director.Designer.cs">
+      <DependentUpon>Director.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dogovors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dogovors.Designer.cs">
+      <DependentUpon>Dogovors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klients_director.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klients_director.Designer.cs">
+      <DependentUpon>Klients_director.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klients_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klients_manager.Designer.cs">
+      <DependentUpon>Klients_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kyrsDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kyrsDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mistaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mistaces.Designer.cs">
+      <DependentUpon>Mistaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mistakes_director.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mistakes_director.Designer.cs">
+      <DependentUpon>Mistakes_director.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_dogovor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_dogovor.Designer.cs">
+      <DependentUpon>Print_dogovor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Putevki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Putevki.Designer.cs">
+      <DependentUpon>Putevki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="See_klient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="See_klient.Designer.cs">
+      <DependentUpon>See_klient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="See_putevka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="See_putevka.Designer.cs">
+      <DependentUpon>See_putevka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="See_sotrudnic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="See_sotrudnic.Designer.cs">
+      <DependentUpon>See_sotrudnic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sotrudniki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sotrudniki.Designer.cs">
+      <DependentUpon>Sotrudniki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tours.Designer.cs">
+      <DependentUpon>Tours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tours_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tours_manager.Designer.cs">
+      <DependentUpon>Tours_manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tyroperators.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tyroperators.Designer.cs">
+      <DependentUpon>Tyroperators.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zakluchenie_dogovora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zakluchenie_dogovora.Designer.cs">
+      <DependentUpon>Zakluchenie_dogovora.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_dogovor.resx">
+      <DependentUpon>Add_dogovor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_klients.resx">
+      <DependentUpon>Add_klients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_putevki.resx">
+      <DependentUpon>Add_putevki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_sotrudniki.resx">
+      <DependentUpon>Add_sotrudniki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_tyroperator.resx">
+      <DependentUpon>Add_tyroperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Director.resx">
+      <DependentUpon>Director.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dogovors.resx">
+      <DependentUpon>Dogovors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klients_director.resx">
+      <DependentUpon>Klients_director.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klients_manager.resx">
+      <DependentUpon>Klients_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mistaces.resx">
+      <DependentUpon>Mistaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mistakes_director.resx">
+      <DependentUpon>Mistakes_director.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_dogovor.resx">
+      <DependentUpon>Print_dogovor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Putevki.resx">
+      <DependentUpon>Putevki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="See_klient.resx">
+      <DependentUpon>See_klient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="See_putevka.resx">
+      <DependentUpon>See_putevka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="See_sotrudnic.resx">
+      <DependentUpon>See_sotrudnic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sotrudniki.resx">
+      <DependentUpon>Sotrudniki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tours.resx">
+      <DependentUpon>Tours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tours_manager.resx">
+      <DependentUpon>Tours_manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tyroperators.resx">
+      <DependentUpon>Tyroperators.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zakluchenie_dogovora.resx">
+      <DependentUpon>Zakluchenie_dogovora.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".xsc">
+      <DependentUpon>.xsd</DependentUpon>
+    </None>
+    <None Include=".xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include=".xss">
+      <DependentUpon>.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet.xsc">
+      <DependentUpon>kyrsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet.xss">
+      <DependentUpon>kyrsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet10.xsc">
+      <DependentUpon>kyrsDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet10.xss">
+      <DependentUpon>kyrsDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet2.xsc">
+      <DependentUpon>kyrsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet2.xss">
+      <DependentUpon>kyrsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet3.xsc">
+      <DependentUpon>kyrsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet3.xss">
+      <DependentUpon>kyrsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet4.xsc">
+      <DependentUpon>kyrsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet4.xss">
+      <DependentUpon>kyrsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet5.xsc">
+      <DependentUpon>kyrsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet5.xss">
+      <DependentUpon>kyrsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet6.xsc">
+      <DependentUpon>kyrsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet6.xss">
+      <DependentUpon>kyrsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet7.xsc">
+      <DependentUpon>kyrsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet7.xss">
+      <DependentUpon>kyrsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet8.xsc">
+      <DependentUpon>kyrsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet8.xss">
+      <DependentUpon>kyrsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet9.xsc">
+      <DependentUpon>kyrsDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="kyrsDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kyrsDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kyrsDataSet9.xss">
+      <DependentUpon>kyrsDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Вход.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1686048626713.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\000-cute-travel-icons-pattern-for-target-by-steph-calvert-art.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\australia-icons-set-sketch-for-your-design-vector-13793285.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-chief-executive-computer-icons-businessperson-business-people-logo-monochrome-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-necktie-suit-costume-formal-wear-men-s-decorative-blue-tie-suit-blue-decorative-christmas-decoration-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-project-management-body-of-knowledge-project-manager-executive-manager-businessmanatdesk-angle-business-recruitment-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-coconut-tree-phi-phi-islands-eleuthera-palm-trees-leaf-palm-tree-arecaceae-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-coconut-tree-png-image_4309318.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gratis-png-documento-contrato-firma-certificacion-plagio-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gratis-png-documento-contrato-firma-certificacion-plagio-thumbnail1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lovepik-beauty-beach-holiday-png-image_400379427_wh300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e91564445f0e09918718f170d290b4d1.png_wh300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoza.ru %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoza.ru %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoza.ru %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoza_ru_%281%29-QWrMJ843M-transformed.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
